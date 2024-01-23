@@ -1,28 +1,63 @@
 import React from "react";
 import "./GoogleHome.css";
+import Button from "../../components/Button/Index.tsx";
+import Nav from "../../components/Nav/Index.tsx";
 
-function Button({ title }: { title: string }) {
-  return <button>{title}</button>;
-}
+const navTop = [
+  {
+    title: "Gmail",
+    link: "#",
+  },
+  {
+    title: "Gmail",
+    link: "#",
+  },
+  {
+    title: "Fazer Login",
+    link: "#",
+    classNameLink: "google-home-nav-login",
+  },
+];
+
+const navBottonFirst = [
+  {
+    title: "Sobre",
+    link: "#",
+  },
+  {
+    title: "Publicidade",
+    link: "#",
+  },
+  {
+    title: "Negócios",
+    link: "#",
+  },
+  {
+    title: "Como Funciona a pesquisa",
+    link: "#",
+  },
+];
+
+const navBottonSecond = [
+  {
+    title: "Privacidade",
+    link: "#",
+  },
+  {
+    title: "Termos",
+    link: "#",
+  },
+  {
+    title: "Configuração",
+    link: "#",
+  }
+];
 
 export default function GoogleHome() {
   return (
     <div className="google-home">
-      <nav className="google-home-nav-top">
-        <ul>
-          <li>
-            <a href="">Gmail</a>
-          </li>
-          <li>
-            <a href="">Imagens</a>
-          </li>
-          <li>
-            <a href="" className="google-home-nav-login">
-              Fazer Login
-            </a>
-          </li>
-        </ul>
-      </nav>
+      
+      <Nav classNameType="google-home-nav-top" items={navTop}></Nav>
       <div className="google-home-content-center">
         <img
           src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
@@ -40,6 +75,8 @@ export default function GoogleHome() {
           <p>Brasil</p>
         </div>
 
+        {/* <Nav classNameType="google-home-nav-top" items={navBottonFirst}></Nav>
+        <Nav classNameType="google-home-nav-top" items={navBottonSecond}></Nav> */}
         <nav>
           <ul>
             <li>
