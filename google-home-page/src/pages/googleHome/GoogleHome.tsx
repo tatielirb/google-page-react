@@ -1,7 +1,11 @@
 import React from "react";
 import "./GoogleHome.css";
 
-function GoogleHome() {
+function Button({ title }: { title: string }) {
+  return <button>{title}</button>;
+}
+
+export default function GoogleHome() {
   return (
     <div className="google-home">
       <nav className="google-home-nav-top">
@@ -26,8 +30,8 @@ function GoogleHome() {
         />
         <input type="text" />
         <div className="google-home-content--button">
-          <button>Pesquisar Google</button>
-          <button>Estou com Sorte</button>
+          <Button title="Pesquisar Google" />
+          <Button title="Estou com Sorte" />
         </div>
       </div>
 
@@ -67,5 +71,3 @@ function GoogleHome() {
     </div>
   );
 }
-
-export default GoogleHome;
