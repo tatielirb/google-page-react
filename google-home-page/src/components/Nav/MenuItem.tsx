@@ -1,10 +1,5 @@
 import React from "react";
-
-interface MenuItemProps {
-  link: string;
-  title: string;
-  classNameLink?: string;
-}
+import { MenuItemProps } from "../../types/Nav.ts";
 
 export default function MenuItem({
   title,

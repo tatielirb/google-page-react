@@ -4,37 +4,17 @@
   height: 100%;
 }
 
-.google-home ul {
-  list-style-type: none;
-  display: inline-flex;
-  box-sizing: border-box;
-  line-height: normal;
-  padding: 0 4px;
-  margin: 0px;
-  flex: 0 0 auto;
-}
-.google-home ul li a {
-  display: inline;
-  vertical-align: middle;
-  text-decoration: none;
-  color: rgba(0, 0, 0, 0.87);
-}
-.google-home-nav-top {
+.google-home-nav-top nav {
   padding: 6px;
   justify-content: end;
   height: 48px;
   vertical-align: middle;
-  white-space: nowrap;
   align-items: center;
   display: flex;
 }
 
 .google-home-nav-top ul {
   display: contents;
-}
-
-.google-home-nav-top ul li {
-  padding-left: 15px;
 }
 
 a.google-home-nav-login {
@@ -45,8 +25,6 @@ a.google-home-nav-login {
   font-size: 14px;
   letter-spacing: 0.25px;
   line-height: 16px;
-  margin-left: 10px;
-  margin-right: 8px;
   min-width: 96px;
   padding: 9px 23px;
   text-align: center;
@@ -90,24 +68,9 @@ a.google-home-nav-login {
   flex-grow: 1;
 }
 
-.google-home-content--button button {
-  background-color: #f8f9fa;
-  border: 1px solid #f8f9fa;
-  border-radius: 4px;
-  color: #3c4043;
-  font-size: 14px;
-  margin: 11px 4px;
-  padding: 0 16px;
-  line-height: 27px;
-  height: 36px;
-  min-width: 54px;
-  text-align: center;
-  cursor: pointer;
-  user-select: none;
-}
-.google-home-nav-bottom {
+.google-home-footer {
   background: #f2f2f2;
-  color: #202124;
+  /* color: #202124; */
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -115,21 +78,16 @@ a.google-home-nav-login {
   align-self: flex-end;
 }
 
-.google-home-nav-bottom--location {
+.google-home-footer--location {
   padding: 0px 30px;
   border-bottom: 1px solid #dadce0;
   font-size: 15px;
   display: flex;
 }
-.google-home-nav-bottom nav {
+
+.google-home-footer--nav-bottom {
   padding: 0 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-}
-
-.google-home-nav-bottom nav ul li {
-  display: block;
-  padding: 15px;
-  white-space: nowrap;
 }
