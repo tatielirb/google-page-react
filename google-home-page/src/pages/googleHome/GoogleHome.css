@@ -6,7 +6,7 @@
 
 .google-home-nav-top nav {
   padding: 6px;
-  justify-content: end;
+  justify-content: flex-end;
   height: 48px;
   vertical-align: middle;
   align-items: center;
