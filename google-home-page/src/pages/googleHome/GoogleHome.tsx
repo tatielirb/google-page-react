@@ -4,7 +4,6 @@ import "./GoogleHome.css";
 import Button from "../../components/Button/Index.tsx";
 import Nav from "../../components/Nav/Index.tsx";
 
-
 export default function GoogleHome() {
   return (
     <div className="google-home">
