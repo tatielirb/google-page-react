@@ -1,12 +1,12 @@
 import './App.css';
 // import GoogleHome from './pages/googleHome/GoogleHome.tsx';
-import Login from "./pages/Login/Login.tsx";
+import SignInView from "./pages/SignIn/SignInView.tsx";
 
 function App() {
   return (
     <div className="App">
       {/* <GoogleHome></GoogleHome> */}
-      <Login></Login>
+      <SignInView></SignInView>
     </div>
   );
 }
