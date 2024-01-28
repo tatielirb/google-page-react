@@ -9,6 +9,7 @@ button {
   text-align: center;
   cursor: pointer;
   user-select: none;
+  font-weight: bold;
 }
 .button-gray {
   background-color: #f8f9fa;
@@ -16,10 +17,10 @@ button {
   color: #3c4043;
 }
 .button-gray:hover {
-  box-shadow: 0 1px 1px rgba(0,0,0,.1);
-    background-color: #f8f9fa;
-    border: 1px solid #dadce0;
-    color: #202124;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  background-color: #f8f9fa;
+  border: 1px solid #dadce0;
+  color: #202124;
 }
 
 .button-blue {
