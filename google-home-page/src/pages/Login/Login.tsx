@@ -27,8 +27,8 @@ export default function Login() {
           <a href="">Saiba mais sobre como usar o Modo visitante</a>
         </div>
         <div className="login-button">
-          <Button title="Criar conta" />
-          <Button title="Avançar" />
+          <Button title="Criar conta" classNameType="button-white"/>
+          <Button title="Avançar" classNameType="button-blue"/>
         </div>
       </div>
     </div>
