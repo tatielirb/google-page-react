@@ -18,8 +18,8 @@ export default function GoogleHome() {
         />
         <input type="text" />
         <div className="google-home-content--button">
-          <Button title="Pesquisar Google" classNameType="button-gray"/>
-          <Button title="Estou com Sorte" classNameType="button-gray"/>
+          <Button title="Pesquisar Google" classNameType="button-gray" />
+          <Button title="Estou com Sorte" classNameType="button-gray" />
         </div>
       </div>
 

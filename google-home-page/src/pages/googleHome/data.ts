@@ -1,49 +1,50 @@
 export const navTop = [
   {
     title: "Gmail",
-    link: "#",
+    link: "/",
   },
   {
     title: "Imagens",
-    link: "#",
+    link: "/",
   },
   {
     title: "Fazer Login",
-    link: "#",
+    link: "/sign-in-view",
     classNameLink: "google-home-nav-login",
+    isInternal: true,
   },
 ];
 
 export const navBottomFirst = [
   {
     title: "Sobre",
-    link: "#",
+    link: "/",
   },
   {
     title: "Publicidade",
-    link: "#",
+    link: "/",
   },
   {
     title: "Negócios",
-    link: "#",
+    link: "/",
   },
   {
     title: "Como Funciona a pesquisa",
-    link: "#",
+    link: "/",
   },
 ];
 
 export const navBottomSecond = [
   {
     title: "Privacidade",
-    link: "#",
+    link: "/",
   },
   {
     title: "Termos",
-    link: "#",
+    link: "/",
   },
   {
     title: "Configuração",
-    link: "#",
+    link: "/",
   },
 ];
