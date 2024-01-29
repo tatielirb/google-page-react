@@ -12,7 +12,6 @@
   display: block;
   height: 24px;
 }
-
 .login-content {
   border: 1px solid #dadce0;
   border-radius: 8px;
@@ -23,7 +22,6 @@
   width: 370px;
   padding: 48px 40px 36px;
 }
-
 .login-img {
   display: flex;
   height: 24px;
@@ -31,10 +29,18 @@
   box-sizing: inherit;
   margin: 0 auto;
 }
+.login-step {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.login-step.active {
+  display: block;
+  opacity: 1;
+}
 .login-header {
   text-align: center;
 }
-
 
 .login-header h1 {
   color: rgb(32, 33, 36);
@@ -126,24 +132,11 @@
   margin-top: 32px;
   text-align: left;
 }
-
 .login-infos p {
   margin: 0;
 }
-
 .login-button {
   display: flex;
   justify-content: space-between;
   margin-top: 32px;
-}
-
-.login-step{
-  display: none;
-  opacity: 0;
-  transition: opacity 0.5s ease;
-}
-
-.login-step.active {
-  display: block;
-  opacity: 1;
 }

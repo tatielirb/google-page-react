@@ -7,7 +7,7 @@ export default function SignInView() {
   const [activeBlock, setActiveBlock] = useState<number>(1);
 
   const handleClick = (blockNumber: number) => {
-    setActiveBlock(blockNumber);
+    if (valueEmail.trim()) setActiveBlock(blockNumber);
   };
 
   const [valueEmail, setInputValueEmail] = useState<string>("");
@@ -30,6 +30,7 @@ export default function SignInView() {
             <h1>Fazer Login</h1>
             <p>Use sua conta do Google</p>
           </div>
+
           <div className="login-form">
             <div className="login-form--email">
               <input
