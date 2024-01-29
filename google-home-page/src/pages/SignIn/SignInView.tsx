@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { ChangeEvent, useState } from "react";
 import "./SignInView.css";
 import Button from "../../components/Button/Index.tsx";
 import Link from "../../components/Link/Index.tsx";
@@ -9,6 +9,13 @@ export default function SignInView() {
   const handleClick = (blockNumber: number) => {
     setActiveBlock(blockNumber);
   };
+
+  const [valueEmail, setInputValueEmail] = useState<string>("");
+
+  const getValueEmail = (event: ChangeEvent<HTMLInputElement>) => {
+    setInputValueEmail(event.target.value);
+  };
+
   return (
     <div className="login">
       <div className="login-content">
@@ -27,9 +34,10 @@ export default function SignInView() {
             <div className="login-form--email">
               <input
                 type="text"
-                name="email"
-                id="email"
                 placeholder="E-mail e Telefone"
+                value={valueEmail}
+                onChange={getValueEmail}
+                required
               />
               <Link title="Esqueceu seu e-mail?"></Link>
             </div>
@@ -43,14 +51,18 @@ export default function SignInView() {
           </div>
           <div className="login-button">
             <Button title="Criar conta" classNameType="button-white" />
-            <Button title="Avançar" classNameType="button-blue" onClickProp={() => handleClick(2)}/>
+            <Button
+              title="Avançar"
+              classNameType="button-blue"
+              onClickProp={() => handleClick(2)}
+            />
           </div>
         </div>
 
         <div className={`login-step ${activeBlock === 2 ? "active" : ""}`}>
           <div className="login-header">
-            <h1>Olá</h1>
-            <div className="login-header--email">testeemail@gmail.com</div>
+            <h1>Olá!</h1>
+            <div className="login-header--email">{valueEmail}</div>
           </div>
           <div className="login-form">
             <div className="login-form--password">
@@ -68,7 +80,11 @@ export default function SignInView() {
           </div>
           <div className="login-button">
             <Button title="Tente de outro jeito" classNameType="button-white" />
-            <Button title="Avançar" classNameType="button-blue" onClickProp={() => handleClick(1)}/>
+            <Button
+              title="Avançar"
+              classNameType="button-blue"
+              onClickProp={() => handleClick(1)}
+            />
           </div>
         </div>
       </div>
