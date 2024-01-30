@@ -1,6 +1,6 @@
 import React from "react";
 import { MenuItemProps } from "../../types/Nav.ts";
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function MenuItem({
   title,
@@ -11,11 +11,9 @@ export default function MenuItem({
   const renderLink = () => {
     if (isInternal) {
       return (
-        <Router>
-          <Link to={link} className={classNameLink}>
-            {title}
-          </Link>
-        </Router>
+        <Link to={link} className={classNameLink}>
+          {title}
+        </Link>
       );
     } else {
       return (

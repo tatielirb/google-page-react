@@ -1,12 +1,10 @@
 import "./App.css";
-import GoogleHome from "./pages/googleHome/GoogleHome.tsx";
-import AppRoutes from "../src/route/AppRoutes.tsx";
+import MainRoutes from "./route/Routes.tsx";
 
 function App() {
   return (
     <div className="App">
-      <AppRoutes />
-      <GoogleHome></GoogleHome>
+      <MainRoutes />
     </div>
   );
 }
