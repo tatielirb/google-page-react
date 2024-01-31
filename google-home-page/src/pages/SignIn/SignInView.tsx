@@ -2,6 +2,7 @@ import React, { ChangeEvent, useState } from "react";
 import "./SignInView.css";
 import Button from "../../components/Button/Index.tsx";
 import Link from "../../components/Link/Index.tsx";
+import Input from "../../components/Input/Index.tsx";
 
 export default function SignInView() {
   const [activeBlock, setActiveBlock] = useState<number>(1);
@@ -12,8 +13,8 @@ export default function SignInView() {
 
   const [valueEmail, setInputValueEmail] = useState<string>("");
 
-  const getValueEmail = (event: ChangeEvent<HTMLInputElement>) => {
-    setInputValueEmail(event.target.value);
+  const getValueEmail = (newValue: string) => {
+    setInputValueEmail(newValue);
   };
 
   return (
@@ -33,13 +34,14 @@ export default function SignInView() {
 
           <div className="login-form">
             <div className="login-form--email">
-              <input
-                type="text"
-                placeholder="E-mail e Telefone"
-                value={valueEmail}
-                onChange={getValueEmail}
-                required
-              />
+              <Input
+                typeProp="text"
+                placeholderProp="E-mail e Telefone"
+                valueProp={valueEmail}
+                onChangeProp={(valueEmail) => getValueEmail(valueEmail)}
+                requiredProp
+              ></Input>
+
               <Link title="Esqueceu seu e-mail?"></Link>
             </div>
           </div>
@@ -67,12 +69,10 @@ export default function SignInView() {
           </div>
           <div className="login-form">
             <div className="login-form--password">
-              <input
-                type="password"
-                name="password"
-                id="password"
-                placeholder="Digite sua senha"
-              />
+              <Input
+                typeProp="password"
+                placeholderProp="Digite sua senha"
+              ></Input>
               <div className="login-form--checkbox">
                 <input type="checkbox" id="checkbox" name="checkbox" />
                 <label htmlFor="checkbox">Mostrar senha</label>
