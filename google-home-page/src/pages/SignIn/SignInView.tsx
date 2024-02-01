@@ -5,10 +5,10 @@ import Link from "../../components/Link/Index.tsx";
 import Input from "../../components/Input/Index.tsx";
 
 export default function SignInView() {
-  const [activeBlock, setActiveBlock] = useState<number>(1);
+  const [activeStep, setActiveStep] = useState<string>("email");
 
-  const handleClick = (blockNumber: number) => {
-    if (valueEmail.trim()) setActiveBlock(blockNumber);
+  const changeStep = (blockStep: string) => {
+    if (valueEmail.trim()) setActiveStep(blockStep);
   };
 
   const [valueEmail, setInputValueEmail] = useState<string>("");
@@ -26,7 +26,7 @@ export default function SignInView() {
           className="login-img"
         />
 
-        {activeBlock === 1 && (
+        {activeStep === "email" && (
           <div className="login-step active">
             <div className="login-header">
               <h1>Fazer Login</h1>
@@ -58,13 +58,13 @@ export default function SignInView() {
               <Button
                 title="Avançar"
                 classNameType="button-blue"
-                onClickProp={() => handleClick(2)}
+                onClickProp={() => changeStep("password")}
               />
             </div>
           </div>
         )}
 
-        {activeBlock === 2 && (
+        {activeStep === "password" && (
           <div className="login-step active">
             <div className="login-header">
               <h1>Olá!</h1>
@@ -88,9 +88,9 @@ export default function SignInView() {
                 classNameType="button-white"
               />
               <Button
-                title="Avançar"
+                title="Voltar"
                 classNameType="button-blue"
-                onClickProp={() => handleClick(1)}
+                onClickProp={() => changeStep("email")}
               />
             </div>
           </div>
