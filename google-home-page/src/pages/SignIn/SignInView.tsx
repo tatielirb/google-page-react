@@ -4,16 +4,19 @@ import FormEmail from "./components/FormEmail/Index.tsx";
 import FormPassoword from "./components/FormPassoword/Index.tsx";
 
 export default function SignInView() {
+  const [valueEmail, setInputValueEmail] = useState<string>("");
   const [activeStep, setActiveStep] = useState<string>("email");
+
+  const handleEmailInputChange = (newValue: string) => {
+    setInputValueEmail(newValue);
+  };
 
   const changeStep = (blockStep: string) => {
     if (valueEmail.trim()) setActiveStep(blockStep);
   };
 
-  const [valueEmail, setInputValueEmail] = useState<string>("");
-
-  const getValueEmail = (newValue: string) => {
-    setInputValueEmail(newValue);
+  const handleBackClick = () => {
+    setActiveStep("email");
   };
 
   return (
@@ -25,9 +28,19 @@ export default function SignInView() {
           className="login-img"
         />
 
-        {activeStep === "email" && <FormEmail />}
+        {activeStep === "email" && (
+          <FormEmail
+            valueEmailProp={handleEmailInputChange}
+            onStepClick={changeStep}
+          />
+        )}
 
-        {activeStep === "password" && <FormPassoword />}
+        {activeStep === "password" && (
+          <FormPassoword
+            valueEmailInput={valueEmail}
+            onBackClick={handleBackClick}
+          />
+        )}
       </div>
     </div>
   );

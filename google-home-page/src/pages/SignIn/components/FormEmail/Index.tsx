@@ -2,18 +2,19 @@ import React, { useState } from "react";
 import Button from "../../../../components/Button/Index.tsx";
 import Link from "../../../../components/Link/Index.tsx";
 import Input from "../../../../components/Input/Index.tsx";
+import { FormEmailProp } from "../../../../types/FormEmail.ts";
 
-export default function FormEmail() {
-  const [activeStep, setActiveStep] = useState<string>("email");
-
-  const changeStep = (blockStep: string) => {
-    if (valueEmail.trim()) setActiveStep(blockStep);
-  };
-
+export default function FormEmail({
+  valueEmailProp,
+  onStepClick,
+}: FormEmailProp) {
   const [valueEmail, setInputValueEmail] = useState<string>("");
 
   const getValueEmail = (newValue: string) => {
     setInputValueEmail(newValue);
+    if (valueEmailProp) {
+      valueEmailProp(newValue);
+    }
   };
 
   return (
@@ -48,7 +49,11 @@ export default function FormEmail() {
         <Button
           title="Avançar"
           classNameType="button-blue"
-          onClickProp={() => changeStep("password")}
+          onClickProp={() => {
+            if (onStepClick) {
+              onStepClick("password");
+            }
+          }}
         />
       </div>
     </div>
