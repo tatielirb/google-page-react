@@ -1,6 +1,6 @@
 import React from "react";
 import "./Input.css";
-import { inputProps } from "../../types/Input.ts";
+import { inputProps } from "types/Input";
 
 export default function Input({
   typeProp,

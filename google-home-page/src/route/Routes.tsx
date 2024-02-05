@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import GoogleHome from "../pages/googleHome/GoogleHome.tsx";
-import SignInView from "../pages/SignIn/SignInView.tsx";
+import GoogleHome from "pages/googleHome/GoogleHome";
+import SignInView from "pages/SignIn/SignInView";
 
 export default function MainRoutes() {
   return (

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import Button from "../../../../components/Button/Index.tsx";
-import Link from "../../../../components/Link/Index.tsx";
-import Input from "../../../../components/Input/Index.tsx";
-import { FormEmailProp } from "../../../../types/FormEmail.ts";
+import Button from "components/Button/Index";
+import Link from "components/Link/Index";
+import Input from "components/Input/Index";
+import { FormEmailProp } from "types/FormEmail";
 
 export default function FormEmail({
   valueEmailProp,

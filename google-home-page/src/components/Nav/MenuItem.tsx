@@ -1,5 +1,5 @@
 import React from "react";
-import { MenuItemProps } from "../../types/Nav.ts";
+import { MenuItemProps } from "types/Nav";
 import { Link } from "react-router-dom";
 
 export default function MenuItem({

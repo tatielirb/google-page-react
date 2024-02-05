@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./SignInView.css";
-import FormEmail from "./components/FormEmail/Index.tsx";
-import FormPassoword from "./components/FormPassoword/Index.tsx";
+import FormEmail from "./components/FormEmail/Index";
+import FormPassoword from "./components/FormPassoword/Index";
 
 export default function SignInView() {
   const [valueEmail, setInputValueEmail] = useState<string>("");

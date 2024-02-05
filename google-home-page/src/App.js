@@ -1,5 +1,5 @@
-import "./App.css";
-import MainRoutes from "./route/Routes.tsx";
+import "App.css";
+import MainRoutes from "route/Routes.tsx";
 
 function App() {
   return (

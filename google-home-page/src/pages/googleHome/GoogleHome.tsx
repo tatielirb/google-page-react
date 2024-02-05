@@ -1,8 +1,8 @@
 import React from "react";
-import { navTop, navBottomFirst, navBottomSecond } from "./data.ts";
+import { navTop, navBottomFirst, navBottomSecond } from "./data";
 import "./GoogleHome.css";
-import Button from "../../components/Button/Index.tsx";
-import Nav from "../../components/Nav/Index.tsx";
+import Button from "components/Button/Index";
+import Nav from "components/Nav/Index";
 
 export default function GoogleHome() {
   return (

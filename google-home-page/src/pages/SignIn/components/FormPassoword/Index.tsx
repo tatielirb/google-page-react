@@ -1,7 +1,7 @@
 import React from "react";
-import Button from "../../../../components/Button/Index.tsx";
-import Input from "../../../../components/Input/Index.tsx";
-import { FormPasswordProp } from "../../../../types/FormPassoword.ts";
+import Button from "components/Button/Index";
+import Input from "components/Input/Index";
+import { FormPasswordProp } from "types/FormPassoword";
 
 export default function FormPassoword({ valueEmailInput, onBackClick }: FormPasswordProp) {
   return (
