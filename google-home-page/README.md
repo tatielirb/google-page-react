@@ -1,4 +1,9 @@
 # Getting Started with Create React App
+Initial react project to learn simple bases and how the library works.
+
+https://github.com/tatielirb/react-challenges/assets/5995859/6d28e86c-a80a-48be-ba5d-1c5afcf7c4a6
+
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
