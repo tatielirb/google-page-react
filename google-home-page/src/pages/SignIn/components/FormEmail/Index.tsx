@@ -34,7 +34,7 @@ export default function FormEmail({
             requiredProp
           ></Input>
 
-          <Link title="Esqueceu seu e-mail?"></Link>
+          <Link link="#" title="Esqueceu seu e-mail?" ></Link>
         </div>
       </div>
       <div className="login-infos">
@@ -42,7 +42,7 @@ export default function FormEmail({
           Não está no seu computador? Use o modo visitante para fazer login com
           privacidade.
         </p>
-        <Link title="Saiba mais sobre como usar o Modo visitante"></Link>
+        <Link link="#" title="Saiba mais sobre como usar o Modo visitante"></Link>
       </div>
       <div className="login-button">
         <Button title="Criar conta" classNameType="button-white" />
